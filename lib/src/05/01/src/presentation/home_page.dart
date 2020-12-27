@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_api/src/05/01/src/containers/movies_container.dart';
@@ -38,4 +36,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

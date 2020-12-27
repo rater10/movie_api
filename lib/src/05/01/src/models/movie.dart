@@ -13,7 +13,6 @@ abstract class Movie implements Built<Movie, MovieBuilder> {
 
   Movie._();
 
-
   String get url;
 
   String get title;
@@ -36,5 +35,4 @@ abstract class Movie implements Built<Movie, MovieBuilder> {
   String get largeCoverImage;
 
   static Serializer<Movie> get serializer => _$movieSerializer;
-
 }

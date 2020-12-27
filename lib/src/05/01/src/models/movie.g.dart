@@ -15,14 +15,12 @@ class _$MovieSerializer implements StructuredSerializer<Movie> {
   final String wireName = 'Movie';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, Movie object,
-      {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object> serialize(Serializers serializers, Movie object, {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'url',
       serializers.serialize(object.url, specifiedType: const FullType(String)),
       'title',
-      serializers.serialize(object.title,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.title, specifiedType: const FullType(String)),
       'year',
       serializers.serialize(object.year, specifiedType: const FullType(int)),
       'rating',
@@ -30,17 +28,13 @@ class _$MovieSerializer implements StructuredSerializer<Movie> {
       'runtime',
       serializers.serialize(object.runtime, specifiedType: const FullType(int)),
       'summary',
-      serializers.serialize(object.summary,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.summary, specifiedType: const FullType(String)),
       'background_image',
-      serializers.serialize(object.backgroundImage,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.backgroundImage, specifiedType: const FullType(String)),
       'medium_cover_image',
-      serializers.serialize(object.mediumCoverImage,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.mediumCoverImage, specifiedType: const FullType(String)),
       'large_cover_image',
-      serializers.serialize(object.largeCoverImage,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.largeCoverImage, specifiedType: const FullType(String)),
     ];
 
     return result;
@@ -58,40 +52,31 @@ class _$MovieSerializer implements StructuredSerializer<Movie> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'url':
-          result.url = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.url = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'title':
-          result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.title = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'year':
-          result.year = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+          result.year = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
           break;
         case 'rating':
-          result.rating = serializers.deserialize(value,
-              specifiedType: const FullType(num)) as num;
+          result.rating = serializers.deserialize(value, specifiedType: const FullType(num)) as num;
           break;
         case 'runtime':
-          result.runtime = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+          result.runtime = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
           break;
         case 'summary':
-          result.summary = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.summary = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'background_image':
-          result.backgroundImage = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.backgroundImage = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'medium_cover_image':
-          result.mediumCoverImage = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.mediumCoverImage = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'large_cover_image':
-          result.largeCoverImage = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.largeCoverImage = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -120,8 +105,7 @@ class _$Movie extends Movie {
   @override
   final String largeCoverImage;
 
-  factory _$Movie([void Function(MovieBuilder) updates]) =>
-      (new MovieBuilder()..update(updates)).build();
+  factory _$Movie([void Function(MovieBuilder) updates]) => (new MovieBuilder()..update(updates)).build();
 
   _$Movie._(
       {this.url,
@@ -164,8 +148,7 @@ class _$Movie extends Movie {
   }
 
   @override
-  Movie rebuild(void Function(MovieBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+  Movie rebuild(void Function(MovieBuilder) updates) => (toBuilder()..update(updates)).build();
 
   @override
   MovieBuilder toBuilder() => new MovieBuilder()..replace(this);
@@ -191,11 +174,7 @@ class _$Movie extends Movie {
         $jc(
             $jc(
                 $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, url.hashCode), title.hashCode),
-                                year.hashCode),
-                            rating.hashCode),
+                    $jc($jc($jc($jc($jc(0, url.hashCode), title.hashCode), year.hashCode), rating.hashCode),
                         runtime.hashCode),
                     summary.hashCode),
                 backgroundImage.hashCode),
@@ -248,18 +227,15 @@ class MovieBuilder implements Builder<Movie, MovieBuilder> {
 
   String _backgroundImage;
   String get backgroundImage => _$this._backgroundImage;
-  set backgroundImage(String backgroundImage) =>
-      _$this._backgroundImage = backgroundImage;
+  set backgroundImage(String backgroundImage) => _$this._backgroundImage = backgroundImage;
 
   String _mediumCoverImage;
   String get mediumCoverImage => _$this._mediumCoverImage;
-  set mediumCoverImage(String mediumCoverImage) =>
-      _$this._mediumCoverImage = mediumCoverImage;
+  set mediumCoverImage(String mediumCoverImage) => _$this._mediumCoverImage = mediumCoverImage;
 
   String _largeCoverImage;
   String get largeCoverImage => _$this._largeCoverImage;
-  set largeCoverImage(String largeCoverImage) =>
-      _$this._largeCoverImage = largeCoverImage;
+  set largeCoverImage(String largeCoverImage) => _$this._largeCoverImage = largeCoverImage;
 
   MovieBuilder();
 
