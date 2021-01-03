@@ -3,7 +3,8 @@ part of models;
 abstract class Movie implements Built<Movie, MovieBuilder> {
   factory Movie([void Function(MovieBuilder b) updates]) = _$Movie;
 
-  factory Movie.fromJson(dynamic json) => serializers.deserializeWith(serializer, json);
+  factory Movie.fromJson(dynamic json) =>
+      serializers.deserializeWith(serializer, json);
 
   Movie._();
 

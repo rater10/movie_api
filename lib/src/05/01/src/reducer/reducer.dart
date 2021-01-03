@@ -4,17 +4,15 @@ import 'package:movie_api/src/05/01/src/models/index.dart';
 import 'package:redux/redux.dart';
 
 Reducer<AppState> reducer = combineReducers(
-  <Reducer<AppState>> [
+  <Reducer<AppState>>[
     TypedReducer<AppState, GetMoviesStart>(_getMoviesStart),
     TypedReducer<AppState, GetMoviesSuccessful>(_getMoviesSuccessful),
     TypedReducer<AppState, GetMoviesError>(_getMoviesError),
     TypedReducer<AppState, SetQuality>(_setQuality),
     TypedReducer<AppState, SetGenres>(_setGenres),
     TypedReducer<AppState, SetOrderBy>(_setOrderBy),
-    
   ],
 );
-
 
 AppState _getMoviesStart(AppState state, GetMoviesStart action) {
   return state.rebuild((AppStateBuilder b) => b.isLoading = true);

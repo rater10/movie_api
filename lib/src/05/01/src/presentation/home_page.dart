@@ -21,9 +21,12 @@ class HomePage extends StatelessWidget {
                   OrderByContainer(
                     builder: (BuildContext context, String orderBy) {
                       return IconButton(
-                        icon: Icon(orderBy == 'desc' ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up),
+                        icon: Icon(orderBy == 'desc'
+                            ? Icons.keyboard_arrow_down
+                            : Icons.keyboard_arrow_up),
                         onPressed: () {
-                          final Store<AppState> store = StoreProvider.of<AppState>(context);
+                          final Store<AppState> store =
+                              StoreProvider.of<AppState>(context);
 
                           if (orderBy == 'desc') {
                             store.dispatch(const SetOrderBy('asc'));
@@ -98,7 +101,13 @@ class HomePage extends StatelessWidget {
                                 ..dispatch(SetQuality(value))
                                 ..dispatch(const GetMovies.start(1));
                             },
-                            items: <String>[null, '720p', '1080p', '2160p', '3D'].map((String value) {
+                            items: <String>[
+                              null,
+                              '720p',
+                              '1080p',
+                              '2160p',
+                              '3D'
+                            ].map((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value ?? 'All'),
@@ -109,9 +118,11 @@ class HomePage extends StatelessWidget {
                       ),
                       Expanded(
                         child: GridView.builder(
-                          padding: const EdgeInsets.all(8.0).copyWith(bottom: 56.0),
+                          padding:
+                              const EdgeInsets.all(8.0).copyWith(bottom: 56.0),
                           itemCount: movies.length,
-                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             mainAxisSpacing: 8.0,
                             crossAxisSpacing: 8.0,
@@ -139,7 +150,8 @@ class HomePage extends StatelessWidget {
                       FlatButton(
                         child: const Text('Load more'),
                         onPressed: () {
-                          final Store<AppState> store = StoreProvider.of<AppState>(context);
+                          final Store<AppState> store =
+                              StoreProvider.of<AppState>(context);
                           store.dispatch(GetMovies.start(store.state.page));
                         },
                       ),
