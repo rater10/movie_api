@@ -1,17 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:movie_api/src/05/01/src/actions/get_movies.dart';
-import 'package:movie_api/src/05/01/src/actions/set_genres.dart';
-import 'package:movie_api/src/05/01/src/actions/set_order_by.dart';
-import 'package:movie_api/src/05/01/src/actions/set_quality.dart';
-import 'package:movie_api/src/05/01/src/containers/genres_container.dart';
-import 'package:movie_api/src/05/01/src/containers/is_loading_container.dart';
-import 'package:movie_api/src/05/01/src/containers/movies_container.dart';
-import 'package:movie_api/src/05/01/src/containers/order_by_container.dart';
-import 'package:movie_api/src/05/01/src/containers/quality_container.dart';
-import 'package:movie_api/src/05/01/src/models/app_state.dart';
-import 'package:movie_api/src/05/01/src/models/movie.dart';
+import 'package:movie_api/src/05/01/src/actions/index.dart';
+import 'package:movie_api/src/05/01/src/containers/index.dart';
+import 'package:movie_api/src/05/01/src/models/index.dart';
 import 'package:redux/redux.dart';
 
 class HomePage extends StatelessWidget {

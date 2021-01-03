@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:movie_api/src/05/01/src/models/app_state.dart';
-import 'package:movie_api/src/05/01/src/models/movie.dart';
-import 'package:redux/redux.dart';
+part of containers;
 
 class MoviesContainer extends StatelessWidget {
   const MoviesContainer({Key key, @required this.builder}) : super(key: key);

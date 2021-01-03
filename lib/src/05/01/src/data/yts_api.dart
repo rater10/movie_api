@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
-import 'package:movie_api/src/05/01/src/models/movie.dart';
+import 'package:movie_api/src/05/01/src/models/index.dart';
 import 'package:meta/meta.dart';
 
 class YtsApi {
