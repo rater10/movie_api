@@ -19,8 +19,7 @@ class AppEpics {
     ]);
   }
 
-  Stream<dynamic> _getMoviesStart(
-      Stream<GetMoviesStart> actions, EpicStore<AppState> store) {
+  Stream<dynamic> _getMoviesStart(Stream<GetMoviesStart> actions, EpicStore<AppState> store) {
     return actions
         .asyncMap((GetMoviesStart action) {
           return _ytsApi.getMovies(
